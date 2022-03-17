@@ -1,54 +1,49 @@
 .low {
-    color: red;
+  color: red;
 }
 
 .up {
-    color: green;
+  color: green;
 }
 
 .curDate {
-    font-size: 32px;
-    padding: 16px;
-    /*background: #76bf76;*/
-    display: flex;
-    justify-content: center;
-    margin: 0;
+  font-size: 32px;
+  padding: 16px;
+  /*background: #76bf76;*/
+  display: flex;
+  justify-content: center;
+  margin: 0;
 }
 
 .currentValute {
-    font-size: 24px;
-    margin: 0 30%;
-    padding: 0;
+  font-size: 24px;
+  margin: 0 30%;
+  padding: 0;
 }
 
 .tableRate {
-
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .Rate {
-
-    padding: 8px;
-    display: flex;
-    justify-content: space-between;
-    border: 1px solid #bbbbbb;
-
+  padding: 8px;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #bbbbbb;
 }
 
 .Rate:hover {
-    box-shadow: 1px 1px 3px 0px black;
-    cursor: pointer;
+  box-shadow: 1px 1px 3px 0px black;
+  cursor: pointer;
 }
 
 .Rate:active {
-    box-shadow: none;
+  box-shadow: none;
 }
 
-
-
 .prevRates {
-    padding: 8px 8px 8px 8px;
-    display: flex;
-    justify-content: space-between;
+  padding: 8px 8px 8px 8px;
+  display: flex;
+  justify-content: space-between;
 }
