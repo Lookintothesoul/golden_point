@@ -37,6 +37,7 @@ export const ExchangeRates = () => {
   }
 
   function handleClickValute(charCode) {
+
     if (!historyRates) {
       getHistoryRates(charCode).then((historyRates) =>
         setHistoryRates(historyRates),
@@ -76,10 +77,13 @@ export const ExchangeRates = () => {
           <div key={valute.ID} className="currentValute">
             <ul className="tableRate" type="none">
               <li
+                data-tooltip={valute.Name}
                 className="Rate"
-                onClick={() => handleClickValute(valute.CharCode)}
+                onClick={() => {
+                  handleClickValute(valute.CharCode)
+                }}
               >
-                <span data-tooltip={valute.Name}>{valute.CharCode}</span>
+                <span>{valute.CharCode}</span>
                 <span>{valute.Value.toFixed(4).replace('.', ',')} руб.</span>
                 <span>{trend(valute.Value, valute.Previous)}</span>
               </li>
