@@ -37,15 +37,20 @@ export const ExchangeRates = () => {
   }
 
   function handleClickValute(charCode) {
-
-    if (!historyRates) {
-      getHistoryRates(charCode).then((historyRates) =>
-        setHistoryRates(historyRates),
-      )
-    } else {
-      setHistoryRates(null)
-    }
+    setHistoryRates(null)
+    getHistoryRates(charCode).then((historyRates) =>
+      setHistoryRates(historyRates),
+    )
   }
+
+  //   if (!historyRates) {
+  //     getHistoryRates(charCode).then((historyRates) =>
+  //       setHistoryRates(historyRates),
+  //     )
+  //   } else {
+  //     setHistoryRates(null)
+  //   }
+  // }
 
   async function getHistoryRates(charCode) {
     let previousUrl = exchangeRates.PreviousURL
@@ -80,7 +85,9 @@ export const ExchangeRates = () => {
                 data-tooltip={valute.Name}
                 className="Rate"
                 onClick={() => {
-                  handleClickValute(valute.CharCode)
+                  if (historyRates?.charCode === valute.CharCode) {
+                    setHistoryRates(null)
+                  } else handleClickValute(valute.CharCode)
                 }}
               >
                 <span>{valute.CharCode}</span>
