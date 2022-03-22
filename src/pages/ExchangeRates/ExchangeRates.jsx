@@ -43,15 +43,6 @@ export const ExchangeRates = () => {
     )
   }
 
-  //   if (!historyRates) {
-  //     getHistoryRates(charCode).then((historyRates) =>
-  //       setHistoryRates(historyRates),
-  //     )
-  //   } else {
-  //     setHistoryRates(null)
-  //   }
-  // }
-
   async function getHistoryRates(charCode) {
     let previousUrl = exchangeRates.PreviousURL
     const historyRates = { charCode, list: [] }
